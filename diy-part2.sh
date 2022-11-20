@@ -122,6 +122,7 @@ cp -f ../coremark.sh feeds/packages/utils/coremark/
 echo 'refresh feeds'
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+./scripts/feeds install -f
 #echo '首页增加CPU频率动态显示'
 #cp -f ../diy/mod-index.htm ./feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
 
