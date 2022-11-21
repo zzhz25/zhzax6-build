@@ -28,6 +28,5 @@
 #git clone https://github.com/zsh-users/zsh-syntax-highlighting.git package/base-files/files/root/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 #git clone https://github.com/zsh-users/zsh-completions package/base-files/files/root/.oh-my-zsh/custom/plugins/zsh-completions
 
-sudo add-apt-repository ppa:chromium-daily/stable
 sudo apt update
 sudo apt install libnftnl-dev
