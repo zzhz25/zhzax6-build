@@ -32,5 +32,5 @@ git clone git://git.netfilter.org/libnftnl
 cd libnftnl
 sh autogen.sh
 ./configure
-make
-make install
+sudo make
+sudo make install
