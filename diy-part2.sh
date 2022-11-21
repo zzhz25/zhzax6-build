@@ -39,7 +39,6 @@ svn export --force  https://github.com/openwrt/packages/trunk/net/xtables-addons
 svn co https://github.com/coolsnowwolf/lede/trunk/target/linux/generic/hack-5.15 target/linux/generic/hack-5.15
 
 sed -i "s/tty\(0\|1\)::askfirst/tty\1::respawn/g" target/linux/*/base-files/etc/inittab
-Give feedback
 
 
 rm -rf package/boot/uboot-envtools package/firmware/ipq-wifi package/firmware/ath11k* package/kernel/mac80211 target/linux/generic
@@ -116,22 +115,3 @@ sed -i '/set wireless.default_radio${devidx}.encryption=sae-mixed/a\set wireless
 #sed -i '/CONFIG_CPU_FREQ_GOV_ONDEMAND=y/a\CONFIG_CPU_FREQ_GOV_SCHEDUTIL=y' target/linux/ipq807x/Makefile
 sed -i 's/mu_beamformer=0/mu_beamformer=1/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
-
-echo 'replace coremark.sh with the new one'
-cp -f ../coremark.sh feeds/packages/utils/coremark/
-
-echo 'refresh feeds'
-./scripts/feeds update -a
-./scripts/feeds install -a
-./scripts/feeds install -f
-#echo '首页增加CPU频率动态显示'
-#cp -f ../diy/mod-index.htm ./feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
-
-#echo 'enable magic'
-#echo 'src-git helloworld https://github.com/fw876/helloworld'>>./feeds.conf.default
-#git clone https://github.com/robbyrussell/oh-my-zsh package/base-files/files/root/.oh-my-zsh
-
-# Install extra plugins
-#git clone https://github.com/zsh-users/zsh-autosuggestions package/base-files/files/root/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-#git clone https://github.com/zsh-users/zsh-syntax-highlighting.git package/base-files/files/root/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-#git clone https://github.com/zsh-users/zsh-completions package/base-files/files/root/.oh-my-zsh/custom/plugins/zsh-completions
