@@ -29,4 +29,4 @@
 #git clone https://github.com/zsh-users/zsh-completions package/base-files/files/root/.oh-my-zsh/custom/plugins/zsh-completions
 
 wget https://launchpad.net/ubuntu/+archive/primary/+files/libnftnl-dev_1.2.4-2_amd64.deb
-sudo dpkg -i libnftnl-dev_1.2.4-2_amd64.deb
+sudo dpkg -i -y libnftnl-dev_1.2.4-2_amd64.deb
