@@ -28,9 +28,5 @@
 #git clone https://github.com/zsh-users/zsh-syntax-highlighting.git package/base-files/files/root/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 #git clone https://github.com/zsh-users/zsh-completions package/base-files/files/root/.oh-my-zsh/custom/plugins/zsh-completions
 
-git clone git://git.netfilter.org/libnftnl
-cd libnftnl
-sh autogen.sh
-./configure
-sudo make
-sudo make install
+wget https://launchpad.net/ubuntu/+archive/primary/+files/libnftnl-dev_1.2.4-2_amd64.deb
+sudo dpkg -i libnftnl-dev_1.2.4-2_amd64.deb
